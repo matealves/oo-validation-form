@@ -165,12 +165,17 @@ class Validator {
       template.textContent = message;
       template.classList.remove("template");
       inputParent.appendChild(template);
+      input.style.borderColor = "#ff1a1a";
     }
   }
 
   // limpar validações da tela
   cleanValidations(validations) {
     validations.forEach((el) => el.remove());
+
+    document.querySelectorAll("input").forEach((el) => {
+      el.removeAttribute("style");
+    });
   }
 }
 
