@@ -165,7 +165,6 @@ class Validator {
       template.textContent = message;
       template.classList.remove("template");
       inputParent.appendChild(template);
-      input.style.borderColor = "#ff1a1a";
     }
   }
 
