@@ -1,0 +1,139 @@
+/* geral */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  color: #666;
+  border: none;
+}
+
+input,
+label {
+  display: block;
+  outline: none;
+  width: 100%;
+}
+
+a {
+  color: #e60084;
+}
+
+body {
+  background-color: rgb(250, 250, 250);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* form */
+#main-container {
+  width: 500px;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.116);
+  border-radius: 10px;
+  padding: 50px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+  }
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.full-box {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+.accept {
+  position: relative;
+}
+
+.half-box {
+  flex: 1 1 40%;
+  position: relative;
+}
+
+.spacing {
+  margin-right: 10%;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+input {
+  border-bottom: 2px solid #666;
+  padding: 10px 0;
+  font-size: 0.75rem;
+  margin-bottom: 40px;
+
+  &:focus {
+    border-color: #e60084;
+  }
+}
+
+input[type="submit"] {
+  background-color: #e60084;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+  transition: filter 0.3s;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-top: 10px;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+#agreement {
+  margin-right: 5px;
+}
+
+#agreement,
+#agreement-label {
+  display: inline-block;
+  width: auto;
+  font-weight: 400;
+}
+
+#agreement-label + .error-validation {
+  margin-top: -36px;
+}
+
+.error-validation {
+  color: #ff1a1a;
+  position: absolute;
+  top: 57px;
+  font-size: 0.75rem;
+}
+
+.template {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #main-container {
+    height: 100%;
+  }
+
+  .half-box {
+    flex: 1 1 100%;
+  }
+}
