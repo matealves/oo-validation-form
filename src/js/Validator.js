@@ -134,8 +134,7 @@ export class Validator {
     }
 
     if (uppercases === 0 || numbers === 0) {
-      let errorMessage =
-        "A senha deve conter um caractere maíusculo e um número.";
+      let errorMessage = "Deve conter um caractere maíusculo e um número.";
 
       this.showMessage(input, errorMessage);
     }
